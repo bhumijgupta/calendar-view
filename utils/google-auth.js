@@ -23,9 +23,14 @@ let getConnectionUrl = (auth) => {
 // gets token from callback code
 let getTokenFromCode = (code, auth) => {
   return new Promise((resolve, reject) => {
-    auth.getToken(code).then(({ tokens }) => {
-      resolve(tokens);
-    });
+    auth
+      .getToken(code)
+      .then(({ tokens }) => {
+        resolve(tokens);
+      })
+      .catch((err) => {
+        reject(err);
+      });
   });
 };
 

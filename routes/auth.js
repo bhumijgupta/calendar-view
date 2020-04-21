@@ -8,6 +8,10 @@ const express = require("express"),
   jwtUtil = require("../utils/jwt"),
   { getMessageFromTemplate } = require("../utils/browser");
 
+// ***************
+// ROUTES
+// ***************
+
 router.get("/", async (req, res) => {
   let oAuthClient = getClient();
   // Get redirect url
@@ -25,10 +29,16 @@ router.get("/callback", async (req, res) => {
   const code = req.query.code;
   if (code) {
     let oAuthClient = getClient();
-    const token = await getTokenFromCode(code, oAuthClient);
-    console.log("token", token);
-    res.send(getMessageFromTemplate(true, jwtUtil.signToken(token)));
-    res.end();
+    getTokenFromCode(code, oAuthClient)
+      .then((token) => {
+        console.log("token", token);
+        res.send(getMessageFromTemplate(true, jwtUtil.signToken(token)));
+        res.end();
+      })
+      .catch((err) => {
+        console.error(err);
+        res.send(getMessageFromTemplate(false));
+      });
   } else {
     res.send(getMessageFromTemplate(false));
   }
