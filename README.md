@@ -2,25 +2,27 @@
 
 A simple backend api to view upcoming calendar events
 
-# Run Locally
+## Run Locally
 
 Stay tuned, Coming Soon
 
-# Documentation
+## Documentation
 
-The Api docs are generated using [apidocs](https://www.apidocs.js) are hosted [here](https://bhumijgupta.github.io/calendar-view/docs)<br>
+The api docs are generated using [apidocs](https://www.apidocs.js). The full documentation can be found [here](https://bhumijgupta.github.io/calendar-view/)
 
-## Generate docs
+### Generate docs
 
-To generate docs run
+To generate docs manually, run
 
 ```
+sudo npm i -g apidocs
 apidocs -i routes -o docs
 ```
 
-# Linting
+## Linting
 
-Lint code using `npm run lint`
+The project uses eslint and prettier to lint the files.The configuration files are [.eslintrc](./.eslintrc), [.eslintignore](./eslintignore) and [.prettierignore](./prettierignore).<br>
+You can manually lint code using `npm run lint`.
 
 ## Author
 
@@ -28,7 +30,7 @@ Lint code using `npm run lint`
 
 ### Bhumij Gupta
 
-![GitHub followers](https://img.shields.io/github/followers/bhumijgupta?label=Follow&style=social) [![LinkedIn](https://img.shields.io/static/v1.svg?label=connect&message=@bhumijgupta&color=success&logo=linkedin&style=flat&logoColor=white)](https://www.linkedin.com/in/bhumijgupta/) ![Twitter URL](https://img.shields.io/twitter/url?style=social&url=http%3A%2F%2Ftwitter.com%2Fbhumijgupta)
+![GitHub followers](https://img.shields.io/github/followers/bhumijgupta?label=Follow&style=social) [![LinkedIn](https://img.shields.io/static/v1.svg?label=connect&message=@bhumijgupta&color=success&logo=linkedin&style=flat&logoColor=white)](https://www.linkedin.com/in/bhumijgupta/) [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=http%3A%2F%2Ftwitter.com%2Fbhumijgupta)](https://twitter.com/bhumijgupta)
 
 ---
 
