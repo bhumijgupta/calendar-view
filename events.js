@@ -21,7 +21,7 @@ $("document").ready(() => {
   let getEvents = () => {
     loader.show();
     $.get({
-      url: "http://localhost:3000/api/getEvents",
+      url: "https://calendar-view-backend.herokuapp.com/api/getEvents",
       beforeSend: function (xhr) {
         xhr.setRequestHeader("Authorization", "Bearer " + token);
       },
@@ -87,7 +87,7 @@ $("document").ready(() => {
       attendees = [];
     }
     $.post({
-      url: "http://localhost:3000/api/addAttendee",
+      url: "https://calendar-view-backend.herokuapp.com/api/addAttendee",
       beforeSend: function (xhr) {
         xhr.setRequestHeader("Authorization", "Bearer " + token);
       },
