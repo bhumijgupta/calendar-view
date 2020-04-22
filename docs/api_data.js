@@ -214,5 +214,70 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "routes/api.js",
     "groupTitle": "APIs"
+  },
+  {
+    "type": "get",
+    "url": "/auth/callback",
+    "title": "Callback URL for Oauth response",
+    "name": "OAuth_Callback",
+    "group": "Auth",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "Script",
+            "description": "<p>to send respose to parent/frontend</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "successResponse",
+          "content": "HTTP/1.1 200 OK\n`<script>window.opener.postMessage({type:'status', loginStatus: true, tokens },\"*\");\n  window.close();</script>`",
+          "type": "json"
+        },
+        {
+          "title": "errorResponse",
+          "content": "HTTP/1.1 200 OK\n`<script>window.opener.postMessage({type:'status', loginStatus: false},\"*\");\n  window.close();</script>`",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "routes/auth.js",
+    "groupTitle": "Auth"
+  },
+  {
+    "type": "get",
+    "url": "/auth",
+    "title": "Get Google OAuth sign in URL",
+    "name": "OAuth_Login",
+    "group": "Auth",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "Location",
+            "description": "<p>Google OAuth Sign in URL</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "successResponse",
+          "content": "HTTP/1.1 303 See Other\n{\n  \"Location\": \"OAuth redirect URL\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "routes/auth.js",
+    "groupTitle": "Auth"
   }
 ] });
