@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { google } = require("googleapis");
 
-const scope = ["https://www.googleapis.com/auth/calendar.events.readonly"];
+const scope = ["https://www.googleapis.com/auth/calendar.events"];
 
 let getClient = () => {
   return new google.auth.OAuth2(

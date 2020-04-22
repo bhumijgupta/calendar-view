@@ -3,5 +3,5 @@
   "version": "0.1.0",
   "description": "A simple backend api to authenticate user with google and view calendar events",
   "title": "Calendar view documentation",
-  "url": "https://api.github.com/v1"
+  "url": ""
 }

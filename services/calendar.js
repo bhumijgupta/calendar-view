@@ -6,7 +6,23 @@ let getEvents = (auth) => {
     calendarId: "primary",
     timeMin: new Date().toISOString(),
     maxResults: 10,
+    singleEvents: true,
+    orderBy: "startTime",
   });
 };
 
-module.exports = { getEvents };
+let addAttendee = (auth, data) => {
+  const calendar = google.calendar({ version: "v3", auth });
+  return calendar.events.patch({
+    calendarId: "primary",
+    eventId: data.eventId,
+    requestBody: {
+      attendees: data.attendees,
+      description: data.description,
+      summary: data.summary,
+    },
+    sendUpdates: "all",
+  });
+};
+
+module.exports = { getEvents, addAttendee };

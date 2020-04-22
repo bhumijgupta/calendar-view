@@ -8,7 +8,7 @@ Stay tuned, Coming Soon
 
 ## Documentation
 
-The api docs are generated using [apidocs](https://www.apidocs.js). The full documentation can be found [here](https://bhumijgupta.github.io/calendar-view/)
+The api docs are generated using [apidocs](https://www.apidocs.js). The full documentation can be found [here](https://bhumijgupta.github.io/calendar-view/docs)
 
 ### Generate docs
 
@@ -22,7 +22,11 @@ apidocs -i routes -o docs
 ## Linting
 
 The project uses eslint and prettier to lint the files.The configuration files are [.eslintrc](./.eslintrc), [.eslintignore](./eslintignore) and [.prettierignore](./prettierignore).<br>
-You can manually lint code using `npm run lint`.
+You can manually lint code using
+
+```javascript
+npm run lint
+```
 
 ## Author
 
