@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar View</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="events.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container d-flex h-100 justify-content-center flex-column">
+        <div class="row">
+          <div class="col-md-12 text-center"><h1>Calendar View</h1></div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <!-- ***************
+       Loader
+       *************** -->
+      <div class="row loader-row">
+        <div class="col-md-12 text-center">
+          <div class="lds-dual-ring"></div>
+          <br />
+          Loading events
+        </div>
+      </div>
+      <!-- ***************
+       Event Cards
+       *************** -->
+      <div class="row cards-row">
+        <div class="col-md-12 text-center">
+          <h3>Events</h3>
+        </div>
+        <div class="col-md-12 mt-5">
+          <div class="cards-container"></div>
+        </div>
+      </div>
+      <!-- ***************
+       Invite form 
+       *************** -->
+      <div class="row invite-edit-row">
+        <form class="w-100">
+          <input class="hide" id="invite-id" />
+          <div class="form-group">
+            <label for="invite-title">Title</label>
+            <input
+              class="form-control"
+              id="invite-title"
+              placeholder="Enter title"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="invite-description">Description</label>
+            <textarea
+              class="form-control"
+              id="invite-description"
+              placeholder="Description"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="invite-attendee">Attendee email id</label>
+            <input
+              type="email"
+              class="form-control"
+              id="invite-attendee"
+              placeholder="Attendee email id"
+              required
+            />
+          </div>
+          <div class="form-group" id="invite-result"></div>
+          <button type="submit" class="btn btn-primary" id="invite-button">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="events.js"></script>
+</html>
