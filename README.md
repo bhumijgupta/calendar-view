@@ -1,10 +1,11 @@
-# Calendar-View
-
-A simple backend api to view upcoming calendar events and send calendar invites.
+<h1 align="center">Calendar-View</h1>
+<p align="center">
+A simple backend api to view upcoming calendar events and send calendar invites. <br><a href="https://www.codacy.com/manual/bhumijgupta/calendar-view?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bhumijgupta/calendar-view&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/8ddc224fc1254038a6fe862506a3cdd7"/></a> <a href="https://lgtm.com/projects/g/bhumijgupta/calendar-view/alerts/"><img alt="Total alerts" src="https://img.shields.io/lgtm/alerts/g/bhumijgupta/calendar-view.svg?logo=lgtm&logoWidth=18"/></a> <a href="https://lgtm.com/projects/g/bhumijgupta/calendar-view/context:javascript"><img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/bhumijgupta/calendar-view.svg?logo=lgtm&logoWidth=18"/></a> <a href="https://bhumijgupta.github.io/calendar-view/docs"><img src="https://img.shields.io/badge/docs-deployed-brightgreen" alt="docs-shield"></a>
+</p>
 
 ## Documentation
 
-The api docs are generated using [apidocs](https://www.apidocs.js). The full documentation are hosted [here](https://bhumijgupta.github.io/calendar-view/docs)
+The api docs are generated using [apidocs](https://www.apidocs.js). The full documentation is hosted [here](https://bhumijgupta.github.io/calendar-view/docs)
 
 ### Generate docs
 
