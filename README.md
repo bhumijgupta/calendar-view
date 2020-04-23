@@ -71,6 +71,7 @@ npm run lint
 
 ## Author
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/38af4c0de3e947309cf81bc276e1c4e6)](https://app.codacy.com/manual/bhumijgupta/calendar-view?utm_source=github.com&utm_medium=referral&utm_content=bhumijgupta/calendar-view&utm_campaign=Badge_Grade_Dashboard)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 ### Bhumij Gupta
